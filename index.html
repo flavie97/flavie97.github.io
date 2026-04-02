@@ -21,7 +21,7 @@
   <meta name="twitter:title" content="Flavie Delchard — Portfolio BTS SIO SLAM">
   <meta name="twitter:description" content="Portfolio de Flavie Delchard, étudiante BTS SIO SLAM en recherche d'alternance.">
 
-  <!-- Bing Webmaster Tools : remplace le contenu par ton code de vérification obtenu sur https://www.bing.com/webmasters -->
+  <!-- Bing Webmaster Tools -->
   <meta name="msvalidate.01" content="3A27E3B2599BD2C277BDA2B2524911EF" />
 
   <!-- Schema.org JSON-LD -->
@@ -35,7 +35,7 @@
     "email": "delchardflavie@gmail.com",
     "jobTitle": "Étudiante BTS SIO SLAM — En recherche d'alternance",
     "description": "Étudiante en BTS Services Informatiques aux Organisations, spécialité SLAM, en recherche d'alternance pour une Licence Management Durable QSE.",
-    "sameAs": ["https://www.linkedin.com/in/flavie-delchard"],
+    "sameAs": ["https://www.linkedin.com/in/flavie-delchard-a48a16381/"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Vernouillet",
@@ -460,31 +460,31 @@ body.loaded .hero-actions { animation: fadeUp 0.7s 1s forwards; }
   flex-shrink: 0;
 }
 
-/* Language bars */
+/* Languages — text only, no bars */
 .languages { margin-top: 2rem; }
 .languages h3 { font-size: 1.3rem; margin-bottom: 1.2rem; }
-.lang-item { margin-bottom: 1rem; }
-.lang-header {
+.lang-list {
+  list-style: none;
   display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.lang-list li {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.95rem;
 }
-.lang-bar {
-  height: 8px;
-  background: var(--bg-alt);
-  border-radius: 4px;
-  overflow: hidden;
+.lang-name { font-weight: 500; }
+.lang-level {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  transition: background var(--transition), color var(--transition);
 }
-.lang-fill {
-  height: 100%;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  width: 0;
-}
-.lang-fill.animated { /* widths set inline */ }
 
 /* Interests */
 .interests { margin-top: 2rem; }
@@ -809,6 +809,11 @@ body.loaded .hero-actions { animation: fadeUp 0.7s 1s forwards; }
 }
 
 /* ═══════════════════════════════════════════════════
+   EMPLOIS SAISONNIERS
+   ═══════════════════════════════════════════════════ */
+#emplois { background: var(--bg); transition: background var(--transition); }
+
+/* ═══════════════════════════════════════════════════
    CONTACT
    ═══════════════════════════════════════════════════ */
 #contact .contact-grid {
@@ -1017,6 +1022,7 @@ footer {
         <li><a href="#formation">Formation</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#stages">Stages</a></li>
+        <li><a href="#emplois">Emplois</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
           <a href="assets/CV/CV_FlavieDELCHARD.pdf" download="CV_FlavieDELCHARD.pdf" class="btn-cv" aria-label="Télécharger mon CV au format PDF">
@@ -1056,7 +1062,7 @@ footer {
       <p class="hero-subtitle">Étudiante BTS SIO — spécialité SLAM</p>
       <p class="hero-desc">Future étudiante en Licence Management Durable QSE, je souhaite m'orienter vers les enjeux de qualité, de sécurité et de management durable. Je recherche une alternance afin d'appliquer mes compétences au sein d'une entreprise.</p>
       <div class="hero-actions">
-        <a href="assets/cv/CV_Flavie_Delchard.pdf" download="CV_Flavie_Delchard.pdf" class="btn-primary" aria-label="Télécharger mon CV au format PDF">
+        <a href="assets/CV/CV_FlavieDELCHARD.pdf" download="CV_FlavieDELCHARD.pdf" class="btn-primary" aria-label="Télécharger mon CV au format PDF">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Télécharger mon CV
         </a>
@@ -1093,7 +1099,7 @@ footer {
           </li>
           <li>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            <a href="https://www.linkedin.com/in/flavie-delchard" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/flavie-delchard-a48a16381/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </li>
           <li>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -1102,29 +1108,23 @@ footer {
         </ul>
       </div>
       <div class="reveal reveal-delay-2">
+        <!-- LANGUES — texte uniquement, sans barres de progression -->
         <div class="languages">
           <h3>Langues</h3>
-          <div class="lang-item">
-            <div class="lang-header">
-              <span>Français</span>
-              <span>Natif</span>
-            </div>
-            <div class="lang-bar"><div class="lang-fill" data-width="100%"></div></div>
-          </div>
-          <div class="lang-item">
-            <div class="lang-header">
-              <span>Anglais</span>
-              <span>C1</span>
-            </div>
-            <div class="lang-bar"><div class="lang-fill" data-width="85%"></div></div>
-          </div>
-          <div class="lang-item">
-            <div class="lang-header">
-              <span>Espagnol</span>
-              <span>A2</span>
-            </div>
-            <div class="lang-bar"><div class="lang-fill" data-width="30%"></div></div>
-          </div>
+          <ul class="lang-list">
+            <li>
+              <span class="lang-name">Français</span>
+              <span class="lang-level">Natif</span>
+            </li>
+            <li>
+              <span class="lang-name">Anglais</span>
+              <span class="lang-level">C1</span>
+            </li>
+            <li>
+              <span class="lang-name">Espagnol</span>
+              <span class="lang-level">A2</span>
+            </li>
+          </ul>
         </div>
         <div class="interests">
           <h3>Centres d'intérêt</h3>
@@ -1343,7 +1343,7 @@ footer {
       <!-- A2K Informatique -->
       <article class="project-card reveal reveal-delay-3">
         <div class="project-card-header">
-          <img src="assets/logos/logo_A2K.jpg" alt="Logo A2K Informatique" class="project-logo" loading="lazy">
+          <img src="assets/logos/logo_A2K.png" alt="Logo A2K Informatique" class="project-logo" loading="lazy">
           <div class="project-header-text">
             <h3>Stage A2K Informatique</h3>
             <span class="project-status status-done">Réalisé</span>
@@ -1432,6 +1432,47 @@ footer {
 </section>
 
 <!-- ============================================
+     EMPLOIS SAISONNIERS
+     ============================================ -->
+<section id="emplois">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Expérience</p>
+      <h2 class="section-title">Emplois saisonniers</h2>
+    </div>
+    <div class="stages-grid">
+      <!-- Côté cœur -->
+      <article class="stage-card reveal reveal-delay-1">
+        <div class="stage-header">
+          <p class="stage-meta">Côté cœur · Dreux (28)</p>
+          <h3>Vendeuse responsable</h3>
+          <p class="stage-period">Août 2025 — CDD</p>
+        </div>
+        <ul class="stage-tasks">
+          <li>Gestion autonome de la boutique : ouverture, fermeture et tenue de la caisse</li>
+          <li>Accueil et conseil de la clientèle</li>
+          <li>Réalisation des encaissements et suivi des ventes quotidiennes</li>
+        </ul>
+      </article>
+
+      <!-- Subway -->
+      <article class="stage-card reveal reveal-delay-2">
+        <div class="stage-header">
+          <p class="stage-meta">Subway · Dreux (28)</p>
+          <h3>Employée polyvalente</h3>
+          <p class="stage-period">Juillet 2024 — CDD</p>
+        </div>
+        <ul class="stage-tasks">
+          <li>Prise de commandes, préparation et encaissement des clients</li>
+          <li>Maintien des normes d'hygiène</li>
+          <li>Travail et coopération d'équipe</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
      CONTACT
      ============================================ -->
 <section id="contact">
@@ -1454,7 +1495,7 @@ footer {
           </li>
           <li>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            <a href="https://www.linkedin.com/in/flavie-delchard" target="_blank" rel="noopener noreferrer">linkedin.com/in/flavie-delchard</a>
+            <a href="https://www.linkedin.com/in/flavie-delchard-a48a16381/" target="_blank" rel="noopener noreferrer">linkedin.com/in/flavie-delchard</a>
           </li>
         </ul>
       </div>
@@ -1495,11 +1536,11 @@ footer {
     <div class="footer-content">
       <p class="footer-copy">&copy; 2025 Flavie Delchard. Tous droits réservés.</p>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/flavie-delchard" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Flavie Delchard">
+        <a href="https://www.linkedin.com/in/flavie-delchard-a48a16381/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Flavie Delchard">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
-        <a href="assets/cv/CV_Flavie_Delchard.pdf" download="CV_Flavie_Delchard.pdf" aria-label="Télécharger le CV">
+        <a href="assets/CV/CV_FlavieDELCHARD.pdf" download="CV_FlavieDELCHARD.pdf" aria-label="Télécharger le CV">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           CV
         </a>
@@ -1589,22 +1630,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 revealElements.forEach(el => revealObserver.observe(el));
-
-/* ═══════════════════════════════════════════════════
-   LANGUAGE BAR ANIMATION
-   ═══════════════════════════════════════════════════ */
-const langFills = document.querySelectorAll('.lang-fill');
-const langObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.width = entry.target.dataset.width;
-      entry.target.classList.add('animated');
-      langObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-
-langFills.forEach(el => langObserver.observe(el));
 
 /* ═══════════════════════════════════════════════════
    CONTACT FORM (Formspree via Fetch)
