@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page introuvable · Flavie Delchard</title>
+  <meta name="description" content="Cette page n'existe pas. Retournez au portfolio de Flavie Delchard.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2362202F'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23FBF7E8' text-anchor='middle'%3EFD%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  --dusty-merlot: #62202F;
+  --seafoam: #C9DAA8;
+  --pink-panther: #F5D0C6;
+  --warm-white: #FBF7E8;
+  --chartreuse: #BFAD0E;
+
+  --bg: var(--warm-white);
+  --text: var(--dusty-merlot);
+  --text-light: #8a4a5a;
+  --accent: var(--chartreuse);
+  --accent2: var(--seafoam);
+  --card-border: var(--pink-panther);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', 'Segoe UI', sans-serif;
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-theme="dark"] {
+  --bg: var(--dusty-merlot);
+  --text: var(--warm-white);
+  --text-light: var(--pink-panther);
+  --card-border: #944a5e;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  transition: background var(--transition), color var(--transition);
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -15%;
+  width: 55vw; height: 55vw;
+  max-width: 600px; max-height: 600px;
+  background: radial-gradient(circle, var(--accent2) 0%, transparent 70%);
+  opacity: 0.12;
+  border-radius: 50%;
+  pointer-events: none;
+}
+body::after {
+  content: '';
+  position: absolute;
+  bottom: -15%; left: -10%;
+  width: 40vw; height: 40vw;
+  max-width: 450px; max-height: 450px;
+  background: radial-gradient(circle, var(--pink-panther) 0%, transparent 70%);
+  opacity: 0.1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.error-content {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+
+.error-code {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 20vw, 12rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.error-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 45ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--accent);
+  color: var(--dusty-merlot);
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.error-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(191, 173, 14, 0.3);
+}
+.error-btn svg { width: 18px; height: 18px; }
+
+.theme-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: 2px solid var(--card-border);
+  border-radius: 50%;
+  width: 42px; height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color var(--transition), color var(--transition), transform 0.3s;
+  z-index: 10;
+}
+.theme-toggle:hover { border-color: var(--accent); transform: rotate(30deg); }
+.theme-toggle svg { width: 20px; height: 20px; }
+.icon-moon, [data-theme="dark"] .icon-sun { display: none; }
+[data-theme="dark"] .icon-moon { display: block; }
+
+/* Animation d'entrée */
+.error-content { animation: fadeUp 0.8s 0.2s both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="error-code" aria-hidden="true">404</div>
+
+<div class="error-content">
+  <h1 class="error-title">Oups, page introuvable&nbsp;!</h1>
+  <p class="error-message">Il semblerait que cette page ait pris la poudre d'escampette. Pas de panique — mon portfolio se trouve juste ici.</p>
+  <a href="index.html" class="error-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Retour à l'accueil
+  </a>
+</div>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+  <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+
+<script>
+const toggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+const saved = localStorage.getItem('theme');
+if (saved) html.setAttribute('data-theme', saved);
+
+toggle.addEventListener('click', () => {
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+</script>
+</body>
+</html>

@@ -1,12 +1,1662 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Flavie Delchard, portfolio, BTS SIO, SLAM">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="fr">
+  <title>Flavie Delchard — Portfolio BTS SIO SLAM | Développeuse Web</title>
+  <meta name="description" content="Portfolio de Flavie Delchard, étudiante en BTS SIO spécialité SLAM à Chartres. Développeuse web en alternance, maîtrise Symfony, C#, PHP, WordPress. Recherche alternance Licence QSE.">
+  <meta name="keywords" content="Flavie Delchard, Delchard Flavie, portfolio développeuse web, BTS SIO SLAM, alternance Chartres, Symfony, C#, WordPress, développeuse Eure-et-Loir">
+  <meta name="author" content="Flavie Delchard">
+  <link rel="canonical" href="https://flaviedelchard.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flaviedelchard.com/">
+  <meta property="og:title" content="Flavie Delchard — Portfolio BTS SIO SLAM">
+  <meta property="og:description" content="Portfolio de Flavie Delchard, étudiante BTS SIO SLAM en recherche d'alternance. Projets Symfony, C#, WordPress.">
+  <meta property="og:image" content="https://flaviedelchard.com/assets/og-image.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flavie Delchard — Portfolio BTS SIO SLAM">
+  <meta name="twitter:description" content="Portfolio de Flavie Delchard, étudiante BTS SIO SLAM en recherche d'alternance.">
+
+  <!-- Bing Webmaster Tools : remplace le contenu par ton code de vérification obtenu sur https://www.bing.com/webmasters -->
+  <meta name="msvalidate.01" content="3A27E3B2599BD2C277BDA2B2524911EF" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Flavie Delchard",
+    "alternateName": "Delchard Flavie",
+    "url": "https://flaviedelchard.com",
+    "email": "delchardflavie@gmail.com",
+    "jobTitle": "Étudiante BTS SIO SLAM — En recherche d'alternance",
+    "description": "Étudiante en BTS Services Informatiques aux Organisations, spécialité SLAM, en recherche d'alternance pour une Licence Management Durable QSE.",
+    "sameAs": ["https://www.linkedin.com/in/flavie-delchard"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vernouillet",
+      "postalCode": "28500",
+      "addressCountry": "FR"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Lycée Fulbert",
+      "address": {"@type": "PostalAddress", "addressLocality": "Chartres"}
+    }
+  }
+  </script>
+
+  <!-- Performances -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- Favicon SVG initiales FD -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2362202F'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23FBF7E8' text-anchor='middle'%3EFD%3C/text%3E%3C/svg%3E">
+
+<style>
+/* ═══════════════════════════════════════════════════
+   VARIABLES & RESET
+   ═══════════════════════════════════════════════════ */
+:root {
+  --dusty-merlot: #62202F;
+  --seafoam: #C9DAA8;
+  --pink-panther: #F5D0C6;
+  --warm-white: #FBF7E8;
+  --chartreuse: #BFAD0E;
+
+  /* Mode clair (défaut) */
+  --bg: var(--warm-white);
+  --bg-alt: #f3eeda;
+  --text: var(--dusty-merlot);
+  --text-light: #8a4a5a;
+  --accent: var(--chartreuse);
+  --accent2: var(--seafoam);
+  --card-bg: #fff;
+  --card-border: var(--pink-panther);
+  --card-shadow: rgba(98, 32, 47, 0.08);
+  --nav-bg: rgba(251, 247, 232, 0.92);
+  --tag-bg: var(--pink-panther);
+  --tag-text: var(--dusty-merlot);
+  --overlay: rgba(251, 247, 232, 0.6);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', 'Segoe UI', sans-serif;
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-theme="dark"] {
+  --bg: var(--dusty-merlot);
+  --bg-alt: #4e1a27;
+  --text: var(--warm-white);
+  --text-light: var(--pink-panther);
+  --accent: var(--chartreuse);
+  --accent2: var(--seafoam);
+  --card-bg: #7a2d40;
+  --card-border: #944a5e;
+  --card-shadow: rgba(0, 0, 0, 0.25);
+  --nav-bg: rgba(98, 32, 47, 0.94);
+  --tag-bg: #4e1a27;
+  --tag-text: var(--warm-white);
+  --overlay: rgba(98, 32, 47, 0.6);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-weight: 400;
+  transition: background var(--transition), color var(--transition);
+  overflow-x: hidden;
+}
+
+/* Transition page */
+body.loading { opacity: 0; }
+body.loaded { opacity: 1; transition: opacity 0.6s ease; }
+
+/* ═══════════════════════════════════════════════════
+   TYPOGRAPHIE
+   ═══════════════════════════════════════════════════ */
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.3em; }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+p { max-width: 68ch; }
+a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--text); }
+
+/* Section headings */
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.section-title { position: relative; display: inline-block; }
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ═══════════════════════════════════════════════════
+   LAYOUT
+   ═══════════════════════════════════════════════════ */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+section { padding: 5rem 0; }
+
+/* ═══════════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════════ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--card-border);
+  transition: background var(--transition), border-color var(--transition);
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.04em;
+}
+.nav-logo span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: var(--dusty-merlot);
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s, box-shadow 0.2s, background var(--transition);
+  border: none;
+  cursor: pointer;
+}
+.btn-cv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(191, 173, 14, 0.35);
+  color: var(--dusty-merlot);
+}
+.btn-cv svg { width: 16px; height: 16px; }
+
+/* Theme toggle */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--card-border);
+  border-radius: 50%;
+  width: 38px; height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color var(--transition), color var(--transition), transform 0.3s;
+}
+.theme-toggle:hover { border-color: var(--accent); transform: rotate(30deg); }
+.theme-toggle svg { width: 18px; height: 18px; }
+.icon-moon, [data-theme="dark"] .icon-sun { display: none; }
+[data-theme="dark"] .icon-moon { display: block; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* ═══════════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 72px;
+  position: relative;
+  overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -15%;
+  width: 55vw; height: 55vw;
+  max-width: 700px; max-height: 700px;
+  background: radial-gradient(circle, var(--accent2) 0%, transparent 70%);
+  opacity: 0.15;
+  border-radius: 50%;
+  pointer-events: none;
+}
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: -10%; left: -10%;
+  width: 40vw; height: 40vw;
+  max-width: 500px; max-height: 500px;
+  background: radial-gradient(circle, var(--pink-panther) 0%, transparent 70%);
+  opacity: 0.12;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-content { position: relative; z-index: 1; }
+.hero-greeting {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 0.4em;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.hero-name .accent { color: var(--accent); }
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  max-width: 55ch;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: var(--dusty-merlot);
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(191, 173, 14, 0.3);
+  color: var(--dusty-merlot);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--text);
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 2px solid var(--card-border);
+  transition: border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  color: var(--text);
+}
+
+/* Hero animated entrance */
+body.loaded .hero-greeting { animation: fadeUp 0.7s 0.2s forwards; }
+body.loaded .hero-name { animation: fadeUp 0.7s 0.4s forwards; }
+body.loaded .hero-subtitle { animation: fadeUp 0.7s 0.6s forwards; }
+body.loaded .hero-desc { animation: fadeUp 0.7s 0.8s forwards; }
+body.loaded .hero-actions { animation: fadeUp 0.7s 1s forwards; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════
+   SCROLL ANIMATIONS
+   ═══════════════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ═══════════════════════════════════════════════════
+   ABOUT
+   ═══════════════════════════════════════════════════ */
+#about .about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+.about-text p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+.about-info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.about-info-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.95rem;
+}
+.about-info-list svg {
+  width: 18px; height: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Language bars */
+.languages { margin-top: 2rem; }
+.languages h3 { font-size: 1.3rem; margin-bottom: 1.2rem; }
+.lang-item { margin-bottom: 1rem; }
+.lang-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.lang-bar {
+  height: 8px;
+  background: var(--bg-alt);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.lang-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 0;
+}
+.lang-fill.animated { /* widths set inline */ }
+
+/* Interests */
+.interests { margin-top: 2rem; }
+.interests h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.interests-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.interest-tag {
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ═══════════════════════════════════════════════════
+   COMPETENCES
+   ═══════════════════════════════════════════════════ */
+#competences { background: var(--bg-alt); transition: background var(--transition); }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.skill-group {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: border-color 0.3s, box-shadow 0.3s, background var(--transition);
+}
+.skill-group:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px var(--card-shadow);
+}
+.skill-group h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.skill-group h3 svg { width: 20px; height: 20px; color: var(--accent); }
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.skill-tag {
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s;
+  cursor: default;
+}
+.skill-tag:hover {
+  background: var(--accent);
+  color: var(--dusty-merlot);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Soft skills */
+.soft-skills {
+  margin-top: 2.5rem;
+}
+.soft-skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.soft-tag {
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  border: 2px solid var(--accent2);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background 0.25s, color 0.25s, transform 0.2s;
+}
+.soft-tag:hover {
+  background: var(--accent2);
+  color: var(--dusty-merlot);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════════════
+   FORMATION (TIMELINE)
+   ═══════════════════════════════════════════════════ */
+.timeline {
+  position: relative;
+  margin-top: 2.5rem;
+  padding-left: 2.5rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent2));
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--accent);
+  transition: background var(--transition);
+}
+.timeline-date {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+.timeline-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+.timeline-place {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+.timeline-desc {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* ═══════════════════════════════════════════════════
+   PROJETS
+   ═══════════════════════════════════════════════════ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.project-card {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px var(--card-shadow);
+}
+.project-card-header {
+  padding: 1.5rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.project-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: var(--bg);
+  padding: 4px;
+  border: 1px solid var(--card-border);
+  flex-shrink: 0;
+}
+.project-header-text { flex: 1; }
+.project-header-text h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+.project-status {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  display: inline-block;
+}
+.status-progress {
+  background: rgba(191, 173, 14, 0.15);
+  color: var(--accent);
+}
+.status-done {
+  background: rgba(201, 218, 168, 0.25);
+  color: #5a7a2e;
+}
+[data-theme="dark"] .status-done {
+  color: var(--accent2);
+}
+.project-card-body {
+  padding: 1.2rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-context {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
+}
+.project-desc {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  flex: 1;
+  margin-bottom: 1rem;
+}
+.project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.project-tech {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  letter-spacing: 0.02em;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ═══════════════════════════════════════════════════
+   STAGES
+   ═══════════════════════════════════════════════════ */
+#stages { background: var(--bg-alt); transition: background var(--transition); }
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.stage-card {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color 0.3s, box-shadow 0.3s, background var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.stage-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent), var(--accent2));
+  border-radius: 4px 0 0 4px;
+}
+.stage-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px var(--card-shadow);
+}
+.stage-header {
+  margin-bottom: 1rem;
+}
+.stage-header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+.stage-meta {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.stage-period {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+.stage-tasks {
+  list-style: none;
+  margin-top: 1rem;
+}
+.stage-tasks li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.93rem;
+  color: var(--text-light);
+}
+.stage-tasks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent2);
+}
+
+/* ═══════════════════════════════════════════════════
+   CONTACT
+   ═══════════════════════════════════════════════════ */
+#contact .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+.contact-info p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+.contact-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-details li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+}
+.contact-details svg {
+  width: 20px; height: 20px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.contact-details a { color: var(--text); }
+.contact-details a:hover { color: var(--accent); }
+
+/* Form */
+.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 0.3s, background var(--transition), color var(--transition);
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+.form-group textarea { resize: vertical; min-height: 130px; }
+
+.form-submit {
+  align-self: flex-start;
+  background: var(--accent);
+  color: var(--dusty-merlot);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(191, 173, 14, 0.3);
+}
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-success {
+  display: none;
+  padding: 1.2rem;
+  background: rgba(201, 218, 168, 0.2);
+  border: 2px solid var(--accent2);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--text);
+}
+.form-success.show { display: block; }
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════ */
+footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--card-border);
+  padding: 2.5rem 0;
+  transition: background var(--transition), border-color var(--transition);
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copy {
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer-links a {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-links svg { width: 16px; height: 16px; }
+
+/* ═══════════════════════════════════════════════════
+   DECORATIVE ELEMENTS
+   ═══════════════════════════════════════════════════ */
+.decorative-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--card-border), transparent);
+  margin: 1rem 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  /* Mobile menu */
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--bg);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeIn 0.3s ease;
+  }
+  .nav-links.mobile-open a { font-size: 1.3rem; }
+
+  #about .about-grid { grid-template-columns: 1fr; }
+  #contact .contact-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .stages-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+
+  section { padding: 3.5rem 0; }
+
+  .hero-name { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ═══════════════════════════════════════════════════
+   PRINT
+   ═══════════════════════════════════════════════════ */
+@media print {
+  .navbar, .theme-toggle, .hamburger { display: none; }
+  section { padding: 1rem 0; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
 </head>
-<body>
-    <h1>Flavie Delchard</h1>
+<body class="loading">
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<header class="navbar" role="banner">
+  <div class="container">
+    <a href="#hero" class="nav-logo" aria-label="Retour à l'accueil">F<span>.</span>D</a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#stages">Stages</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="assets/CV/CV_FlavieDELCHARD.pdf" download="CV_FlavieDELCHARD.pdf" class="btn-cv" aria-label="Télécharger mon CV au format PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            CV
+          </a>
+        </li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div style="display:flex;align-items:center;gap:0.8rem;">
+      <button class="theme-toggle" id="themeToggleMobile" aria-label="Changer de thème" style="display:none;">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-greeting">Portfolio</p>
+      <h1 class="hero-name">Flavie<br>Delchard<span class="accent">.</span></h1>
+      <p class="hero-subtitle">Étudiante BTS SIO — spécialité SLAM</p>
+      <p class="hero-desc">Future étudiante en Licence Management Durable QSE, je souhaite m'orienter vers les enjeux de qualité, de sécurité et de management durable. Je recherche une alternance afin d'appliquer mes compétences au sein d'une entreprise.</p>
+      <div class="hero-actions">
+        <a href="assets/cv/CV_Flavie_Delchard.pdf" download="CV_Flavie_Delchard.pdf" class="btn-primary" aria-label="Télécharger mon CV au format PDF">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Télécharger mon CV
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Me contacter
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     À PROPOS
+     ============================================ -->
+<section id="about">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">À propos</p>
+      <h2 class="section-title">Qui suis-je&nbsp;?</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal reveal-delay-1">
+        <p>Future étudiante en Licence Management Durable QSE, je souhaite m'orienter vers les enjeux de qualité, de sécurité et de management durable. Actuellement en BTS SIO spécialité SLAM au Lycée Fulbert de Chartres, j'ai acquis des compétences solides en développement web, gestion de projet et bases de données.</p>
+        <p>Je recherche une alternance pour la rentrée prochaine afin d'appliquer mes compétences au sein d'une entreprise engagée.</p>
+        <ul class="about-info-list">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Vernouillet (28500) · Permis B, véhiculée
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:delchardflavie@gmail.com">delchardflavie@gmail.com</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <a href="https://www.linkedin.com/in/flavie-delchard" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            20 ans (née le 23/05/2005)
+          </li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="languages">
+          <h3>Langues</h3>
+          <div class="lang-item">
+            <div class="lang-header">
+              <span>Français</span>
+              <span>Natif</span>
+            </div>
+            <div class="lang-bar"><div class="lang-fill" data-width="100%"></div></div>
+          </div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <span>Anglais</span>
+              <span>C1</span>
+            </div>
+            <div class="lang-bar"><div class="lang-fill" data-width="85%"></div></div>
+          </div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <span>Espagnol</span>
+              <span>A2</span>
+            </div>
+            <div class="lang-bar"><div class="lang-fill" data-width="30%"></div></div>
+          </div>
+        </div>
+        <div class="interests">
+          <h3>Centres d'intérêt</h3>
+          <div class="interests-tags">
+            <span class="interest-tag">Couture</span>
+            <span class="interest-tag">Dessin</span>
+            <span class="interest-tag">Peinture</span>
+            <span class="interest-tag">Lecture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     COMPÉTENCES
+     ============================================ -->
+<section id="competences">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Compétences</p>
+      <h2 class="section-title">Savoir-faire technique</h2>
+    </div>
+    <div class="skills-grid">
+      <!-- Langages -->
+      <div class="skill-group reveal reveal-delay-1">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Langages
+        </h3>
+        <div class="skill-tags">
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Python</span>
+        </div>
+      </div>
+      <!-- Frameworks & Outils -->
+      <div class="skill-group reveal reveal-delay-2">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Frameworks & Outils
+        </h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Symfony</span>
+          <span class="skill-tag">Bootstrap</span>
+          <span class="skill-tag">Windows Forms</span>
+          <span class="skill-tag">Doctrine</span>
+          <span class="skill-tag">WordPress</span>
+          <span class="skill-tag">WooCommerce</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">GitKraken</span>
+          <span class="skill-tag">Docker</span>
+        </div>
+      </div>
+      <!-- Bases de données -->
+      <div class="skill-group reveal reveal-delay-3">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          Bases de données
+        </h3>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MariaDB</span>
+          <span class="skill-tag">RGPD</span>
+        </div>
+      </div>
+      <!-- Gestion de projet -->
+      <div class="skill-group reveal reveal-delay-1">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Méthodes & Modélisation
+        </h3>
+        <div class="skill-tags">
+          <span class="skill-tag">UML (Looping)</span>
+          <span class="skill-tag">Agile / Scrum</span>
+          <span class="skill-tag">Diagramme de Gantt</span>
+          <span class="skill-tag">Gestion de projet</span>
+          <span class="skill-tag">Audits informatiques</span>
+        </div>
+      </div>
+      <!-- Outils bureautiques -->
+      <div class="skill-group reveal reveal-delay-2">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Bureautique & Communication
+        </h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Pack Office</span>
+          <span class="skill-tag">Canva</span>
+          <span class="skill-tag">Microsoft Teams</span>
+        </div>
+      </div>
+      <!-- Systèmes -->
+      <div class="skill-group reveal reveal-delay-3">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          Systèmes & Automatisation
+        </h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Tâches cron</span>
+          <span class="skill-tag">Sauvegardes</span>
+          <span class="skill-tag">SSL (Let's Encrypt)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compétences transversales -->
+    <div class="soft-skills reveal">
+      <h3 class="section-title" style="font-size:1.4rem;">Compétences transversales</h3>
+      <div class="soft-skills-tags">
+        <span class="soft-tag">Autonomie</span>
+        <span class="soft-tag">Rigueur</span>
+        <span class="soft-tag">Travail en équipe</span>
+        <span class="soft-tag">Gestion de projet</span>
+        <span class="soft-tag">Communication professionnelle</span>
+        <span class="soft-tag">Relation client</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FORMATION
+     ============================================ -->
+<section id="formation">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Formation</p>
+      <h2 class="section-title">Mon parcours</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <p class="timeline-date">2024 — 2026</p>
+        <h3>BTS Services Informatiques aux Organisations</h3>
+        <p class="timeline-place">Lycée Fulbert · Chartres (28)</p>
+        <p class="timeline-desc">Spécialité SLAM — Solutions Logicielles et Applications Métier</p>
+      </div>
+      <div class="timeline-item reveal">
+        <p class="timeline-date">2023 — 2024</p>
+        <h3>L1 Langues Étrangères Appliquées</h3>
+        <p class="timeline-place">Université Paris Nanterre · Nanterre (92)</p>
+        <p class="timeline-desc">Anglais / Espagnol</p>
+      </div>
+      <div class="timeline-item reveal">
+        <p class="timeline-date">2020 — 2023</p>
+        <h3>Baccalauréat Général</h3>
+        <p class="timeline-place">Lycée Rotrou · Dreux (28)</p>
+        <p class="timeline-desc">Spécialités SVT / Anglais — Mention Assez bien</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PROJETS
+     ============================================ -->
+<section id="projets">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Projets</p>
+      <h2 class="section-title">Réalisations</h2>
+    </div>
+    <div class="projects-grid">
+      <!-- Média-Tech -->
+      <article class="project-card reveal reveal-delay-1">
+        <div class="project-card-header">
+          <img src="assets/logos/logo_MediaTech.png" alt="Logo Média-Tech" class="project-logo" loading="lazy">
+          <div class="project-header-text">
+            <h3>Média-Tech</h3>
+            <span class="project-status status-progress">En cours</span>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-context">Projet scolaire BTS SIO · Groupe de 3</p>
+          <p class="project-desc">Néo-médiathèque moderne publique permettant d'accéder à des contenus multimédias via une application desktop. Développement d'une application client lourd multiplateformes intégrant des lecteurs PDF, audio et vidéo, un moteur de recherche, et une gestion complète des membres et des emprunts.</p>
+          <div class="project-techs">
+            <span class="project-tech">C#</span>
+            <span class="project-tech">WinForms</span>
+            <span class="project-tech">SQL Server</span>
+            <span class="project-tech">UML</span>
+            <span class="project-tech">Scrum</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- K-Swap -->
+      <article class="project-card reveal reveal-delay-2">
+        <div class="project-card-header">
+          <img src="assets/logos/logo_KSwap.png" alt="Logo K-Swap" class="project-logo" loading="lazy">
+          <div class="project-header-text">
+            <h3>K-Swap (K-World)</h3>
+            <span class="project-status status-progress">En cours</span>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-context">Projet scolaire BTS SIO · Groupe de 3</p>
+          <p class="project-desc">Plateforme web communautaire dédiée aux passionnés de K-Pop et J-Pop. Base de données musicale avec fonctionnalités sociales : discographies, notation, commentaires, favoris et interactions entre fans. Interface inspirée de Spotify.</p>
+          <div class="project-techs">
+            <span class="project-tech">Symfony</span>
+            <span class="project-tech">PHP</span>
+            <span class="project-tech">MySQL</span>
+            <span class="project-tech">HTML/CSS</span>
+            <span class="project-tech">API YouTube</span>
+            <span class="project-tech">Web scraping</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- A2K Informatique -->
+      <article class="project-card reveal reveal-delay-3">
+        <div class="project-card-header">
+          <img src="assets/logos/logo_A2K.jpg" alt="Logo A2K Informatique" class="project-logo" loading="lazy">
+          <div class="project-header-text">
+            <h3>Stage A2K Informatique</h3>
+            <span class="project-status status-done">Réalisé</span>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-context">Stage BTS SIO 2e année · Dreux (28)</p>
+          <p class="project-desc">Évolution d'un outil de ticketing interne. Correction de bugs et ajout de fonctionnalités sur une application web métier développée sous Symfony, en équipe de 4 développeurs avec méthodologie Scrum.</p>
+          <div class="project-techs">
+            <span class="project-tech">Symfony</span>
+            <span class="project-tech">PHP</span>
+            <span class="project-tech">Scrum</span>
+            <span class="project-tech">Teams</span>
+            <span class="project-tech">Git</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Grain de Folie -->
+      <article class="project-card reveal reveal-delay-4">
+        <div class="project-card-header">
+          <img src="assets/logos/logo_GraindeFolie.png" alt="Logo Grain de Folie" class="project-logo" loading="lazy">
+          <div class="project-header-text">
+            <h3>Stage Grain de Folie</h3>
+            <span class="project-status status-done">Réalisé</span>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-context">Stage BTS SIO 1re année · Béville-le-Comte (28)</p>
+          <p class="project-desc">Conception et développement d'un site e-commerce complet pour une boutique de mode. Création sous WordPress/WooCommerce, migration vers Symfony/Docker, sauvegardes automatisées, intégration Stripe et sécurisation SSL.</p>
+          <div class="project-techs">
+            <span class="project-tech">WordPress</span>
+            <span class="project-tech">WooCommerce</span>
+            <span class="project-tech">Symfony</span>
+            <span class="project-tech">Docker</span>
+            <span class="project-tech">Stripe</span>
+            <span class="project-tech">SSL</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     STAGES
+     ============================================ -->
+<section id="stages">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Expérience</p>
+      <h2 class="section-title">Stages professionnels</h2>
+    </div>
+    <div class="stages-grid">
+      <!-- Stage 1 -->
+      <article class="stage-card reveal reveal-delay-1">
+        <div class="stage-header">
+          <p class="stage-meta">A2K Informatique · Dreux (28)</p>
+          <h3>Évolution d'un outil de ticketing interne</h3>
+          <p class="stage-period">5 janvier au 27 février 2026 — Stage BTS SIO 2e année</p>
+        </div>
+        <ul class="stage-tasks">
+          <li>Correction de bugs et ajout de nouvelles fonctionnalités sur une application web métier (Symfony)</li>
+          <li>Travail en équipe de 4 en méthodologie Scrum, avec suivi des tâches sur Microsoft Teams</li>
+        </ul>
+      </article>
+
+      <!-- Stage 2 -->
+      <article class="stage-card reveal reveal-delay-2">
+        <div class="stage-header">
+          <p class="stage-meta">Grain de Folie · Béville-le-Comte (28)</p>
+          <h3>Conception d'un site e-commerce</h3>
+          <p class="stage-period">26 mai au 20 juin 2025 — Stage BTS SIO 1re année</p>
+        </div>
+        <ul class="stage-tasks">
+          <li>Création complète d'un site marchand sous WordPress et WooCommerce</li>
+          <li>Migration de l'application vers une version récente de Symfony dans un environnement Docker</li>
+          <li>Mise en place de sauvegardes automatiques via des tâches cron</li>
+          <li>Configuration des moyens de paiement (Stripe) et des modules de livraison</li>
+          <li>Personnalisation graphique</li>
+          <li>Mise en place de la sécurité du site</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Prenons contact</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal reveal-delay-1">
+        <p>Vous souhaitez me proposer une alternance, discuter d'un projet ou simplement échanger ? N'hésitez pas à me contacter via le formulaire ou directement par email.</p>
+        <ul class="contact-details">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:delchardflavie@gmail.com">delchardflavie@gmail.com</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Vernouillet (28500)
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <a href="https://www.linkedin.com/in/flavie-delchard" target="_blank" rel="noopener noreferrer">linkedin.com/in/flavie-delchard</a>
+          </li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/xkopvbep" method="POST">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Votre nom">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" required placeholder="Objet de votre message">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Votre message…"></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="formSubmit">Envoyer</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <p>Merci pour votre message ! Je vous répondrai dans les plus brefs délais.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <p class="footer-copy">&copy; 2025 Flavie Delchard. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/flavie-delchard" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Flavie Delchard">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="assets/cv/CV_Flavie_Delchard.pdf" download="CV_Flavie_Delchard.pdf" aria-label="Télécharger le CV">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          CV
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   PAGE LOAD TRANSITION
+   ═══════════════════════════════════════════════════ */
+window.addEventListener('load', () => {
+  document.body.classList.remove('loading');
+  document.body.classList.add('loaded');
+});
+
+/* ═══════════════════════════════════════════════════
+   THEME TOGGLE
+   ═══════════════════════════════════════════════════ */
+const themeToggle = document.getElementById('themeToggle');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
+const html = document.documentElement;
+
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+  const current = html.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+}
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) setTheme(savedTheme);
+
+themeToggle.addEventListener('click', toggleTheme);
+themeToggleMobile.addEventListener('click', toggleTheme);
+
+/* ═══════════════════════════════════════════════════
+   MOBILE MENU
+   ═══════════════════════════════════════════════════ */
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('mobile-open');
+  hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+// Close mobile menu on link click
+navLinks.querySelectorAll('a:not(.btn-cv)').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('mobile-open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+// Show mobile theme toggle
+function updateMobileToggle() {
+  if (window.innerWidth <= 768) {
+    themeToggleMobile.style.display = 'flex';
+  } else {
+    themeToggleMobile.style.display = 'none';
+  }
+}
+updateMobileToggle();
+window.addEventListener('resize', updateMobileToggle);
+
+/* ═══════════════════════════════════════════════════
+   SCROLL REVEAL (IntersectionObserver)
+   ═══════════════════════════════════════════════════ */
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+/* ═══════════════════════════════════════════════════
+   LANGUAGE BAR ANIMATION
+   ═══════════════════════════════════════════════════ */
+const langFills = document.querySelectorAll('.lang-fill');
+const langObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.dataset.width;
+      entry.target.classList.add('animated');
+      langObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+langFills.forEach(el => langObserver.observe(el));
+
+/* ═══════════════════════════════════════════════════
+   CONTACT FORM (Formspree via Fetch)
+   ═══════════════════════════════════════════════════ */
+const contactForm = document.getElementById('contactForm');
+const formSubmit = document.getElementById('formSubmit');
+const formSuccess = document.getElementById('formSuccess');
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  formSubmit.disabled = true;
+  formSubmit.textContent = 'Envoi en cours…';
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      contactForm.style.display = 'none';
+      formSuccess.classList.add('show');
+      contactForm.reset();
+    } else {
+      throw new Error('Erreur serveur');
+    }
+  } catch (error) {
+    formSubmit.disabled = false;
+    formSubmit.textContent = 'Envoyer';
+    alert('Une erreur est survenue. Veuillez réessayer ou m\'envoyer un email directement.');
+  }
+});
+
+/* ═══════════════════════════════════════════════════
+   ACTIVE NAV LINK ON SCROLL
+   ═══════════════════════════════════════════════════ */
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navAnchors.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + id ? 'var(--accent)' : '';
+      });
+    }
+  });
+}, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
+
+sections.forEach(s => navObserver.observe(s));
+</script>
 </body>
 </html>
